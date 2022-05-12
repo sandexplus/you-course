@@ -4,13 +4,13 @@
       <div class="login-page__header">
         <ul class="login-page__header-links">
           <li class="login-page__header-link">
-            <a href="#">Обо мне</a>
+            <a href="#about">Обо мне</a>
           </li>
           <li class="login-page__header-link">
-            <a href="#">Тарифы</a>
+            <a href="#tarif">Тарифы</a>
           </li>
           <li class="login-page__header-link">
-            <a href="#">Отзывы</a>
+            <a href="#reviews">Отзывы</a>
           </li>
           <button class="login-page__header-login">
             Войти
@@ -28,7 +28,7 @@
         </div>
       </div>
     </section>
-    <section class="login-page__about">
+    <section id="about" class="login-page__about">
       <div class="container-wide">
         <div class="login-page__about-container">
           <h2 class="title login-page__about-title">
@@ -57,12 +57,14 @@
             </ul>
           </div>
           <div class="login-page__about-right">
-            <img src="@/assets/img/woman.png" alt="I am">
+            <div class="login-page__about-img">
+              <img src="@/assets/img/woman.png" alt="I am">
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="login-page__tarif">
+    <section id="tarif" class="login-page__tarif">
       <div class="container-wide">
         <div class="login-page__tarif-container">
           <h2 class="title login-page__tarif-title">
@@ -228,7 +230,7 @@
         </div>
       </div>
     </section>
-    <section class="login-page__reviews">
+    <section id="reviews" class="login-page__reviews">
       <div class="container-wide">
         <div class="login-page__reviews-container">
           <h2 class="title login-page__reviews-title">
@@ -334,6 +336,20 @@ export default {
     swiper () {
       return this.$refs.reviewSwiper.$swiper
     }
+  },
+  mounted () {
+    const anchors = document.querySelectorAll('a[href*="#"]')
+
+    anchors.forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        const blockID = anchor.getAttribute('href').slice(1)
+        document.getElementById(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      })
+    })
   }
 }
 </script>
@@ -347,6 +363,9 @@ export default {
     min-height: 980px;
     height: 100vh;
     background-image: url('@/assets/img/login-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
   }
   &__header {
     padding-top: 70px;
@@ -355,7 +374,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 100px;
+      gap: 200px;
       list-style-type: none;
     }
     &-link {
@@ -382,9 +401,9 @@ export default {
       font-weight: 400;
       font-family: 'PP Pangram Sans Rounded';
       font-style: normal;
+      padding-bottom: 5px;
       font-size: 24px;
       line-height: 27px;
-      text-align: center;
       letter-spacing: 0.025em;
       color: #FFFFFF;
       width: 166px;
@@ -411,7 +430,8 @@ export default {
     background: #fbf8f4;
     width: 100%;
     &-container {
-      min-height: 1034px;
+      min-height: 900px;
+      max-height: 900px;
       padding: 155px 165px 0px 155px;
       border: 2px solid rgba(83, 67, 64, 0.3);
       border-top: none;
@@ -428,16 +448,34 @@ export default {
       top: 85px;
     }
     &-right {
-      padding: 20px;
-      border: 2px solid rgba(83, 67, 64, 0.3);
-      border-radius: 270px;
-      width: 540px;
+      position: relative;
+      z-index: 2;
+      width: 500px;
       height: 764px;
       & img {
         border-radius: 270px;
         width: 100%;
         height: 100%;
+        background: #fbf8f4;
       }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        right: -169px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        background: rgba(83, 67, 64, 0.3);
+      }
+    }
+    &-img {
+      padding: 20px;
+      border: 2px solid rgba(83, 67, 64, 0.3);
+      border-radius: 270px;
+      background: #fbf8f4;
     }
     &-left {
       display: flex;
@@ -503,8 +541,8 @@ export default {
     padding-top: 25px;
     &-container {
       padding: 100px 100px 0 100px;
-      min-height: 1034px;
-      min-height: 980px;
+      min-height: 1000px;
+      max-height: 1000px;
       border: 2px solid rgba(83, 67, 64, 0.3);
       border-radius: 40px;
       position: relative;
@@ -640,7 +678,8 @@ export default {
     position: relative;
     &-container {
       padding: 132px 223px 0;
-      min-height: 1034px;
+      min-height: 900px;
+      max-height: 900px;
       border: 2px solid rgba(83, 67, 64, 0.3);
       border-radius: 40px;
       position: relative;
@@ -694,8 +733,8 @@ export default {
     }
     &-link {
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       & img {
         width: 100%;
       }
