@@ -24,6 +24,11 @@
     font-weight: 800;
 }
 @font-face {
+    font-family: 'Muller';
+    src: url('@/assets/fonts/Muller Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
     font-family: 'PP Pangram Sans Rounded';
     src: url('@/assets/fonts/PP Pangram Sans Compact Regular 400.otf');
     font-weight: 400;
@@ -41,16 +46,6 @@
     width: 100%;
     max-width: 1678px;
     margin: 0 auto;
-}
-
-.title {
-    font-family: 'Muller';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 120px;
-    letter-spacing: 0.025em;
-    color: #6F4C30;
-    background: #fbf8f4;
 }
 
 @media (max-width: 1780px) {

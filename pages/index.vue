@@ -1,5 +1,14 @@
 <template>
   <div class="login-page">
+    <popup :class="{'popup_active': loginPopupActive}" @closePopup="loginPopupActive = false">
+      <p class="popup__title">
+        Возможность войти в личный кабинет предоставляется после оплаты какого-либо тарифа и выдачи личного логина
+      </p>
+      <input type="text" class="popup__input" placeholder="Введите логин пользователя">
+      <button class="popup__button">
+        Войти
+      </button>
+    </popup>
     <section class="login-page__promo">
       <div class="login-page__header">
         <ul class="login-page__header-links">
@@ -12,7 +21,7 @@
           <li class="login-page__header-link">
             <a href="#reviews">Отзывы</a>
           </li>
-          <button class="login-page__header-login">
+          <button class="login-page__header-login" @click="loginPopupActive = true">
             Войти
           </button>
         </ul>
@@ -31,7 +40,7 @@
     <section id="about" class="login-page__about">
       <div class="container-wide">
         <div class="login-page__about-container">
-          <h2 class="title login-page__about-title">
+          <h2 class="login-page__about-title">
             ОБО МНЕ
           </h2>
           <div class="login-page__about-left">
@@ -67,7 +76,7 @@
     <section id="tarif" class="login-page__tarif">
       <div class="container-wide">
         <div class="login-page__tarif-container">
-          <h2 class="title login-page__tarif-title">
+          <h2 class="login-page__tarif-title">
             ТАРИФЫ
           </h2>
           <div class="login-page__tarif-items">
@@ -233,7 +242,7 @@
     <section id="reviews" class="login-page__reviews">
       <div class="container-wide">
         <div class="login-page__reviews-container">
-          <h2 class="title login-page__reviews-title">
+          <h2 class="login-page__reviews-title">
             ОТЗЫВЫ
           </h2>
           <div class="login-page__reviews-swiper">
@@ -309,12 +318,14 @@
 <script>
 
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+import Popup from '../components/popup.vue'
 
 export default {
   name: 'LoginPage',
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    Popup
   },
   directives: {
     swiper: directive
@@ -329,7 +340,8 @@ export default {
           nextEl: '.swiper-next',
           prevEl: '.swiper-prev'
         }
-      }
+      },
+      loginPopupActive: false
     }
   },
   computed: {
@@ -412,6 +424,10 @@ export default {
       border-radius: 26px;
       cursor: pointer;
       background: transparent;
+      transition: .3s all;
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
     }
   }
   &__footer {
@@ -446,6 +462,13 @@ export default {
       position: absolute;
       left: -47px;
       top: 85px;
+      font-family: 'Muller';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 120px;
+      letter-spacing: 0.025em;
+      color: #6F4C30;
+      background: #fbf8f4;
     }
     &-right {
       position: relative;
@@ -464,7 +487,7 @@ export default {
         position: absolute;
         width: 100%;
         z-index: -1;
-        right: -169px;
+        right: -165px;
         top: 50%;
         transform: translateY(-50%);
         height: 2px;
@@ -553,6 +576,13 @@ export default {
       left: 50%;
       top: -85px;
       transform: translateX(-50%);
+      font-family: 'Muller';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 120px;
+      letter-spacing: 0.025em;
+      color: #6F4C30;
+      background: #fbf8f4;
     }
     &-items {
       display: grid;
@@ -677,19 +707,25 @@ export default {
     padding-bottom: 181px;
     position: relative;
     &-container {
-      padding: 132px 223px 0;
+      padding: 132px 223px 100px;
       min-height: 900px;
-      max-height: 900px;
       border: 2px solid rgba(83, 67, 64, 0.3);
       border-radius: 40px;
       position: relative;
-      height: 100vh;
+      height: 100%;
     }
     &-title {
       position: absolute;
       left: 50%;
       top: -85px;
       transform: translateX(-50%);
+      font-family: 'Muller';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 120px;
+      letter-spacing: 0.025em;
+      color: #6F4C30;
+      background: #fbf8f4;
     }
     &-slider {
       max-width: 380px;
