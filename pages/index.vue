@@ -230,10 +230,10 @@
               Для оплаты связаться
             </div>
             <a href="#" class="login-page__tarif-link">
-              <img src="@/assets/icons/tg_icon__brown.svg" alt="Telegram">
+              <img src="~assets/icons/tg_icon__brown.svg" alt="Telegram">
             </a>
             <a href="#" class="login-page__tarif-link">
-              <img src="@/assets/icons/inst_icon__brown.svg" alt="Instagram">
+              <img src="~assets/icons/inst_icon__brown.svg" alt="Instagram">
             </a>
           </div>
         </div>
@@ -249,62 +249,62 @@
             <swiper ref="reviewSwiper" :options="swiperOptions">
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review1.png" alt="Review">
+                  <img src="~assets/img/review1.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review2.png" alt="Review">
+                  <img src="~assets/img/review2.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review3.png" alt="Review">
+                  <img src="~assets/img/review3.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review4.png" alt="Review">
+                  <img src="~assets/img/review4.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review5.png" alt="Review">
+                  <img src="~assets/img/review5.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review6.png" alt="Review">
+                  <img src="~assets/img/review6.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review7.png" alt="Review">
+                  <img src="~assets/img/review7.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="@/assets/img/review8.png" alt="Review">
+                  <img src="~assets/img/review8.png" alt="Review">
                 </div>
               </swiper-slide>
             </swiper>
             <div slot="nav-prev" class="swiper-prev login-page__reviews-prev">
-              <img src="@/assets/icons/slider-arrow__left.svg" alt="Prev">
+              <img src="~assets/icons/slider-arrow__left.svg" alt="Prev">
             </div>
             <div slot="nav-next" class="swiper-next login-page__reviews-next">
-              <img src="@/assets/icons/slider-arrow__right.svg" alt="Next">
+              <img src="~assets/icons/slider-arrow__right.svg" alt="Next">
             </div>
           </div>
           <div class="login-page__reviews-links">
             <a href="#" class="login-page__reviews-link">
-              <img src="@/assets/icons/tg_icon__brown.svg" alt="Telegram">
+              <img src="~assets/icons/tg_icon__brown.svg" alt="Telegram">
             </a>
             <a href="#" class="login-page__reviews-link">
-              <img src="@/assets/icons/inst_icon__brown.svg" alt="Instagram">
+              <img src="~assets/icons/inst_icon__brown.svg" alt="Instagram">
             </a>
           </div>
           <div class="login-page__reviews-logo">
-            <img src="@/assets/img/logo.svg" alt="Logo">
+            <img src="~assets/img/logo.svg" alt="Logo">
           </div>
         </div>
       </div>
@@ -374,7 +374,7 @@ export default {
     width: 100%;
     min-height: 980px;
     height: 100vh;
-    background-image: url('@/assets/img/login-background.png');
+    background-image: url('~assets/img/login-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
