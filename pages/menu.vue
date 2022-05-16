@@ -13,7 +13,7 @@
             Методичка
           </p>
         </nuxt-link>
-        <nuxt-link to="/" class="menu-page__menu-item">
+        <nuxt-link to="/trains" class="menu-page__menu-item">
           <p class="menu-page__text">
             Тренировки
           </p>
