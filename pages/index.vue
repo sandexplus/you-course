@@ -249,42 +249,42 @@
             <swiper ref="reviewSwiper" :options="swiperOptions">
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review1.png" alt="Review">
+                  <img src="~assets/img/rev1.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review2.png" alt="Review">
+                  <img src="~assets/img/rev2.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review3.png" alt="Review">
+                  <img src="~assets/img/rev3.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review4.png" alt="Review">
+                  <img src="~assets/img/rev4.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review5.png" alt="Review">
+                  <img src="~assets/img/rev5.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review6.png" alt="Review">
+                  <img src="~assets/img/rev6.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review7.png" alt="Review">
+                  <img src="~assets/img/rev7.png" alt="Review">
                 </div>
               </swiper-slide>
               <swiper-slide>
                 <div class="login-page__reviews-slider">
-                  <img src="~assets/img/review8.png" alt="Review">
+                  <img src="~assets/img/rev8.png" alt="Review">
                 </div>
               </swiper-slide>
             </swiper>
