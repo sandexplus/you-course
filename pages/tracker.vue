@@ -7,7 +7,7 @@
         <Title>Статистика изменений</Title>
         <button class="tracker-page__save-tracker">
           <span>Скачать трекер</span>
-          <img src="@/assets/icons/save.svg" alt="">
+          <img src="~assets/icons/save.svg" alt="">
         </button>
       </div>
       <!--space for table-->
@@ -35,7 +35,7 @@
             </p>
           </div>
         </div>
-        <img src="@/assets/img/maneken.svg" alt="">
+        <img src="~assets/img/maneken.svg" alt="">
       </div>
     </div>
   </div>

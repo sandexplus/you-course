@@ -3,10 +3,10 @@
     <div class="container">
       <div class="header__inner">
         <nuxt-link to="/menu" class="header__logo">
-          <img src="@/assets/img/logo__header.svg" alt="Logo">
+          <img src="~assets/img/logo__header.svg" alt="Logo">
         </nuxt-link>
         <div class="header__right">
-          <img src="@/assets/icons/user.svg" alt="">
+          <img src="~assets/icons/user.svg" alt="">
           <p class="header__user">
             Екатерина
           </p>

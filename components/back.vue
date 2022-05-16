@@ -1,6 +1,6 @@
 <template>
   <nuxt-link to="/menu" class="back">
-    <img src="@/assets/icons/back-arrow.svg" alt="">
+    <img src="~assets/icons/back-arrow.svg" alt="">
     <span>Назад</span>
   </nuxt-link>
 </template>

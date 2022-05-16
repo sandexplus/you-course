@@ -3,7 +3,7 @@
     <div class="popup__overlay" @click="closePopup">
       <div class="popup__container">
         <div class="popup__close" @click="$emit('closePopup')">
-          <img src="@/assets/icons/close.svg" alt="close" class="popup__close">
+          <img src="~assets/icons/close.svg" alt="close" class="popup__close">
         </div>
         <slot />
       </div>

@@ -21,7 +21,7 @@
       </div>
       <button class="manual-page__save">
         <span>Скачать в pdf</span>
-        <img src="@/assets/icons/save.svg" alt="">
+        <img src="~assets/icons/save.svg" alt="">
       </button>
     </div>
   </div>
@@ -46,7 +46,7 @@ export default {
     height: 368px;
     display: flex;
     align-items: flex-end;
-    background-image: url('@/assets/img/manual-promo.png');
+    background-image: url('~assets/img/manual-promo.png');
     border-radius: 40px;
     padding: 0 0 46px 51px;
   }
@@ -70,7 +70,7 @@ export default {
     &:before {
       content: '';
       position: absolute;
-      background-image: url('@/assets/img/manual-border.svg');
+      background-image: url('~assets/img/manual-border.svg');
       top: -15px;
       width: 491px;
       height: 19px;
@@ -80,7 +80,7 @@ export default {
     &:after {
       content: '';
       position: absolute;
-      background-image: url('@/assets/img/manual-border.svg');
+      background-image: url('~assets/img/manual-border.svg');
       bottom: -15px;
       width: 491px;
       height: 19px;

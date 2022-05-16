@@ -29,10 +29,10 @@
       <div class="login-page__footer">
         <div class="login-page__footer-links">
           <a href="" class="login-page__footer-link">
-            <img src="@/assets/icons/tg_icon.svg" alt="Telegram">
+            <img src="~assets/icons/tg_icon.svg" alt="Telegram">
           </a>
           <a href="" class="login-page__footer-link">
-            <img src="@/assets/icons/inst_icon.svg" alt="Instagram">
+            <img src="~assets/icons/inst_icon.svg" alt="Instagram">
           </a>
         </div>
       </div>
@@ -67,7 +67,7 @@
           </div>
           <div class="login-page__about-right">
             <div class="login-page__about-img">
-              <img src="@/assets/img/woman.png" alt="I am">
+              <img src="~assets/img/woman.png" alt="I am">
             </div>
           </div>
         </div>

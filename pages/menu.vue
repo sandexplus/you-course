@@ -49,7 +49,7 @@ export default {
     margin: 0 auto;
     &:before {
       content: '';
-      background-image: url('@/assets/img/menu-border.svg');
+      background-image: url('~assets/img/menu-border.svg');
       position: absolute;
       display: block;
       width: 20px;
@@ -58,7 +58,7 @@ export default {
     }
     &:after {
       content: '';
-      background-image: url('@/assets/img/menu-border.svg');
+      background-image: url('~assets/img/menu-border.svg');
       position: absolute;
       display: block;
       width: 20px;
@@ -89,13 +89,13 @@ export default {
     transition: .3s all;
     position: relative;
     &:first-child {
-      background-image: url('@/assets/img/menu-item1.png');
+      background-image: url('~assets/img/menu-item1.png');
     }
     &:nth-child(2) {
-      background-image: url('@/assets/img/menu-item2.png');
+      background-image: url('~assets/img/menu-item2.png');
     }
     &:last-child {
-      background-image: url('@/assets/img/menu-item3.png');
+      background-image: url('~assets/img/menu-item3.png');
     }
     &:before {
       content: '';
