@@ -16,9 +16,11 @@
     "vue-masked-input": "^0.5.2",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
+    "vue-the-mask": "^0.11.1",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "json-server": "^0.17.0",
     "sass": "^1.51.0",
     "sass-loader": "^10.2.1"
   }

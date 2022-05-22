@@ -22,8 +22,13 @@
           <div class="tracker-page__table-descr">ОР</div>
         </div>
         <swiper ref="reviewSwiper" :options="swiperOptions">
-          <template v-for="table, i of data">
-            <swiper-slide :key="i">
+          <swiper-slide :key="i" v-for="table, i of data">
+            <Table 
+              :tableData="table">
+            </Table>
+          </swiper-slide>
+          <template v-if="data[data.length - 1].length === 6">
+            <swiper-slide :key="i" v-for="table, i of ['']">
               <Table 
                 :tableData="table">
               </Table>
@@ -100,6 +105,7 @@ export default {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 40,
+        allowTouchMove: false,
         navigation: {
           nextEl: '.swiper-next',
           prevEl: '.swiper-prev'
@@ -112,9 +118,9 @@ export default {
       data: [
         [
           [
-            'dfhdfsh',
-            'gsdfgdf',
-            'sfdgs',
+            '23.12.3333',
+            '2333см',
+            's32fdgs',
             'gdfgdf',
             'sdfgsg',
             'dsfgdfgd',
