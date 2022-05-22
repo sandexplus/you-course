@@ -105,6 +105,7 @@ export default {
     width: 100%;
     border: none;
     padding: 15px 26px;
+    min-width: 535px;
     &::placeholder {
       font-family: 'Montserrat';
       font-style: normal;
@@ -135,6 +136,41 @@ export default {
     &:hover {
       background: #8D6A4E;
     }
+  }
+  &__label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    margin-top: 18px; 
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      border: 1.5px solid #AEAEAE;
+      border-radius: 10px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    &_active {
+      &:before {
+        background: rgba(83, 67, 64, 0.8);
+      }
+    }
+  }
+  &__checkbox {
+    opacity: 0;
+    position: absolute;
+    left: -100000px;
+  }
+  &__checkbox-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #AEAEAE;
   }
 }
 </style>
