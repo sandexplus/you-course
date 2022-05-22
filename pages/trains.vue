@@ -17,17 +17,16 @@
         Законченные тренировки можно помечать нажатием на кружок в углу ячейки с номером тренировки
       </p>
       <div class="trains-page__trains">
-        <template v-for="train, i in trains[currentTrain]">
-          <Train
-            :key="i"
-            :dir="i % 2 === 0 ? 1 : 0"
-            :number="i + 1"
-            :name="train.name"
-            :times="train.times"
-            :descr="train.descr"
-            :img="'trains-img.svg'"
-          />
-        </template>
+        <Train
+          v-for="train, i in trains[currentTrain]"
+          :key="i"
+          :dir="i % 2 === 0 ? 1 : 0"
+          :number="i + 1"
+          :name="train.name"
+          :times="train.times"
+          :descr="train.descr"
+          :img="'trains-img.svg'"
+        />
       </div>
     </div>
   </div>
