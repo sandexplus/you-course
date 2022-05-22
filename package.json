@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "json-server": "^0.17.0",
-    "sass": "^1.51.0",
+    "sass": "^1.52.1",
     "sass-loader": "^10.2.1"
   }
 }
