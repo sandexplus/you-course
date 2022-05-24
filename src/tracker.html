@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @include('partials/head.html')
+</head>
+<body>
+    @include('partials/header.html')
+    <main>
+        <div class="tracker-page">
+            <div class="container">
+                @include('partials/back-btn.html')
+                <div class="tracker-page__top-container">
+                    <h2 class="title">Статистика изменений</h2>
+                    <button class="tracker-page__save-tracker">
+                        <span>Скачать трекер</span>
+                        <img src="./img/icons/save.svg" alt="">
+                    </button>
+                </div>
+              <!--space for table-->
+                <div class="tracker-page__reviews-swiper">
+                    <div class="tracker-page__table-descrs">
+                        <div class="tracker-page__table-descr">Дата</div>
+                        <div class="tracker-page__table-descr">ОГ</div>
+                        <div class="tracker-page__table-descr">ОТ</div>
+                        <div class="tracker-page__table-descr">ОБ</div>
+                        <div class="tracker-page__table-descr">ОБ<sub>1</sub></div>
+                        <div class="tracker-page__table-descr">ОН</div>
+                        <div class="tracker-page__table-descr">ОР</div>
+                    </div>
+                    <div class="tracker-page__swiper-container">
+                        <div class="swiper__tables">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracker-page__subtable">
+                    <div class=""></div>
+                    <button class="tracker-page__save-table">Сохранить</button>
+                    <div class="tracker-page__arrows">
+                        <div class="swiper-prev tracker-page__reviews-prev">
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.434082" y="10" width="13.1693" height="1.91553" rx="0.957767" transform="rotate(-45 0.434082 10)" fill="#534340"/>
+                                <rect x="1.78857" y="8.64557" width="13.1693" height="1.91553" rx="0.957767" transform="rotate(45 1.78857 8.64557)" fill="#534340"/>
+                            </svg>
+                        </div>
+                        <div class="swiper-pagination tracker-page__pagination"></div>
+                        <div class="swiper-next tracker-page__reviews-next">
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="13.1693" height="1.91553" rx="0.957767" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 11.333 10)" fill="#534340"/>
+                                <rect width="13.1693" height="1.91553" rx="0.957767" transform="matrix(-0.707107 0.707107 0.707107 0.707107 9.97852 8.64557)" fill="#534340"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+              <div class="tracker-page__bot-container">
+                <div class="tracker-page__data-container">
+                  <Title>Параметры</Title>
+                  <div class="tracker-page__data">
+                    <p class="tracker-page__p">
+                      <span>О</span>бъём <span>Г</span>руди — самое выпуклое место в районе сосков
+                    </p>
+                    <p class="tracker-page__p">
+                      <span>О</span>бъём <span>Т</span>алии — самое тонкое место в районе живота
+                    </p>
+                    <p class="tracker-page__p">
+                      <span>О</span>бъём <span>Б</span>ёдер — самое широкое место на уровне ягодиц
+                    </p>
+                    <p class="tracker-page__p">
+                      <span>О</span>бъём одного <span>Б</span>едра  — на уровне чуть выше середины бедра
+                    </p>
+                    <p class="tracker-page__p">
+                      <span>О</span>бъём <span>Н</span>оги (икры) — на уровне самого широко места
+                    </p>
+                    <p class="tracker-page__p">
+                      <span>О</span>бъём <span>Р</span>уки (бицепса) — на уровне чуть выше середины плеча
+                    </p>
+                  </div>
+                </div>
+                <img src="./img/maneken.svg" alt="">
+              </div>
+            </div>
+          </div>
+    </main>
+</body>
+</html>

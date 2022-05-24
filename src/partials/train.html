@@ -1,0 +1,19 @@
+<div class="train" :class="{'train_right': !direction}">
+    <div class="train__data">
+        <div class="train__number">
+            {{ number }}.
+        </div>
+        <p class="train__name">
+            {{ name }}
+        </p>
+        <p class="train__times">
+            {{ times }}
+        </p>
+        <p class="train__descr">
+            {{ descr }}
+        </p>
+    </div>
+    <div class="train__img">
+        <img :src="img ? require(`./img/${img}`) : ''" alt="">
+    </div>
+</div>

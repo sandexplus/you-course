@@ -1,0 +1,19 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "./components/normalize";
+@import "./components/commons";
+@import "./components/swiper";
+
+@import "./components/header";
+@import "./components/login-page";
+@import "./components/popup";
+@import "./components/menu-page";
+@import "./components/manual-page";
+@import "./components/back-btn";
+@import "./components/tracker-page";
+@import "./components/table";
+@import "./components/trains-page";
+@import "./components/train";

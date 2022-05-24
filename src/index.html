@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+	<div class="login-page">
+		@include('partials/popup.html')
+		<section class="login-page__promo">
+			<div class="login-page__header">
+				<ul class="login-page__header-links">
+					<li class="login-page__header-link">
+						<a href="#about">Обо мне</a>
+					</li>
+					<li class="login-page__header-link">
+						<a href="#tarif">Тарифы</a>
+					</li>
+					<li class="login-page__header-link">
+						<a href="#reviews">Отзывы</a>
+					</li>
+					<button class="login-page__header-login" @click="loginPopupActive = true">
+						Войти
+					</button>
+				</ul>
+			</div>
+			<div class="login-page__footer">
+				<div class="login-page__footer-links">
+					<a href="" class="login-page__footer-link">
+						<img src="./img/icons/tg_icon.svg" alt="Telegram">
+					</a>
+					<a href="" class="login-page__footer-link">
+						<img src="./img/icons/inst_icon.svg" alt="Instagram">
+					</a>
+				</div>
+			</div>
+		</section>
+		<section id="about" class="login-page__about">
+			<div class="container-wide">
+				<div class="login-page__about-container">
+					<h2 class="login-page__about-title">
+						ОБО МНЕ
+					</h2>
+					<div class="login-page__about-left">
+						<h3 class="login-page__about-name">
+							Привет! Меня зовут Диана Щербинина
+						</h3>
+						<p class="login-page__about-text">
+							Я тренер и специалист по питанию. Помогаю людям в модификации образа жизни, коррекции питания и веса
+						</p>
+						<h3 class="login-page__about-name login-page__about-mt">
+							С кем я работаю?
+						</h3>
+						<ul class="login-page__about-list">
+							<li class="login-page__about-item">
+								Беременные девушки и девушки после родов
+							</li>
+							<li class="login-page__about-item">
+								Люди с недостатком мышечной массы и отеками
+							</li>
+							<li class="login-page__about-item">
+								Люди с лишним весом
+							</li>
+						</ul>
+					</div>
+					<div class="login-page__about-right">
+						<div class="login-page__about-img">
+							<img src="./img/woman.png" alt="I am">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="tarif" class="login-page__tarif">
+			<div class="container-wide">
+				<div class="login-page__tarif-container">
+					<h2 class="login-page__tarif-title">
+						ТАРИФЫ
+					</h2>
+					<div class="login-page__tarif-items">
+						<div class="login-page__tarif-item">
+							<div class="login-page__tarif-top">
+								<div class="login-page__tarif-name">
+									Консультация
+								</div>
+								<div class="login-page__tarif-time">
+									Единоразово
+								</div>
+								<p class="login-page__tarif-text">
+									Вы пишите мне, например:
+								</p>
+								<ul class="login-page__tarif-list">
+									<div class="login-page__tarif-li">
+										С чего начать похудение?
+									</div>
+									<div class="login-page__tarif-li">
+										Сколько раз в неделю мне стоит тренироваться?
+									</div>
+									<div class="login-page__tarif-li">
+										Как научиться считать калории?
+									</div>
+								</ul>
+								<div class="login-page__tarif-text">
+									Через сутки я с вами свяжусь по видео, ауидозвонку или в сообщениях.
+								</div>
+								<div class="login-page__tarif-text">
+									На консультации я разберу ваш вопрос и любые дополнительные.
+								</div>
+							</div>
+							<div class="login-page__tarif-bot">
+								<div class="login-page__tarif-sum">
+									1000₽
+								</div>
+								<div class="login-page__tarif-subsum">
+									повторно 800₽
+								</div>
+							</div>
+						</div>
+						<div class="login-page__tarif-item">
+							<div class="login-page__tarif-top">
+								<div class="login-page__tarif-name">
+									Тренировочный план
+								</div>
+								<div class="login-page__tarif-time">
+									Единоразово
+								</div>
+								<p class="login-page__tarif-text">
+									В сообщении вы указываете некоторые детали:
+								</p>
+								<ul class="login-page__tarif-list">
+									<div class="login-page__tarif-li">
+										Где вы занимаетесь (дом или тренажёрный зал)
+									</div>
+									<div class="login-page__tarif-li">
+										Инвентарь, который имеете (гантели, резинки, коврик, штанга и т. д.)
+									</div>
+									<div class="login-page__tarif-li">
+										Ваши особенности (например, есть проблемы со здоровьем)
+									</div>
+									<div class="login-page__tarif-li">
+										Наличие свободного времени (можете заниматься только 3 раза в неделю и т. д.)
+									</div>
+								</ul>
+								<div class="login-page__tarif-text">
+									В течение 2-х дней я составлю для вас программу и подкорректирую, если это потребуется.
+								</div>
+							</div>
+							<div class="login-page__tarif-bot">
+								<div class="login-page__tarif-sum">
+									1000₽
+								</div>
+								<div class="login-page__tarif-subsum">
+									повторно 800₽
+								</div>
+							</div>
+						</div>
+						<div class="login-page__tarif-item">
+							<div class="login-page__tarif-top">
+								<div class="login-page__tarif-name">
+									Сопровождение
+								</div>
+								<div class="login-page__tarif-time">
+									Длится 21 день
+								</div>
+								<p class="login-page__tarif-text">
+									Вы проходите вводное анкетирование.
+								</p>
+								<p class="login-page__tarif-text">
+									И после получаете:
+								</p>
+								<ul class="login-page__tarif-list">
+									<div class="login-page__tarif-li">
+										Рекомендации по ведению рациона
+									</div>
+									<div class="login-page__tarif-li">
+										Доступ к тренировкам
+									</div>
+									<div class="login-page__tarif-li">
+										Трекер для отслеживания параметров тела
+									</div>
+									<div class="login-page__tarif-li">
+										Методичку с главными темами по достижению цели
+									</div>
+									<div class="login-page__tarif-li">
+										Планер и дневник вашего здоровья
+									</div>
+								</ul>
+								<div class="login-page__tarif-text">
+									Куратор будет сопровождать вас на всех этапах, и отвечать на любые вопросы.
+								</div>
+							</div>
+							<div class="login-page__tarif-bot">
+								<div class="login-page__tarif-sum">
+									3000₽
+								</div>
+								<div class="login-page__tarif-subsum">
+									повторно 2800₽
+								</div>
+							</div>
+						</div>
+						<div class="login-page__tarif-item">
+							<div class="login-page__tarif-top">
+								<div class="login-page__tarif-name">
+									Cопровождение парное
+								</div>
+								<div class="login-page__tarif-time">
+									Длится 21 день
+								</div>
+								<p class="login-page__tarif-text">
+									Тот же тариф «Сопровождение» только для двух человек.
+								</p>
+								<p class="login-page__tarif-text">
+									Подходит для подруг, сестёр, матери и дочери.
+								</p>
+							</div>
+							<div class="login-page__tarif-bot">
+								<div class="login-page__tarif-sum">
+									4000₽
+								</div>
+								<div class="login-page__tarif-subsum">
+									повторно 3800₽
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="login-page__tarif-links">
+						<div class="login-page__tarif-link">
+							Для оплаты связаться
+						</div>
+						<a href="#" class="login-page__tarif-link">
+							<img src="./img/icons/tg_icon__brown.svg" alt="Telegram">
+						</a>
+						<a href="#" class="login-page__tarif-link">
+							<img src="./img/icons/inst_icon__brown.svg" alt="Instagram">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="reviews" class="login-page__reviews">
+			<div class="container-wide">
+				<div class="login-page__reviews-container">
+					<h2 class="login-page__reviews-title">
+						ОТЗЫВЫ
+					</h2>
+					<div class="login-page__reviews-swiper-container">
+						<div class="login-page__reviews-swiper">
+							<div class="swiper__login-page">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev1.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev2.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev3.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev4.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev5.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev6.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev7.png" alt="Review">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="login-page__reviews-slider">
+											<img src="./img/rev8.png" alt="Review">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-prev login-page__reviews-prev">
+								<img src="./img/icons/slider-arrow__left.svg" alt="Prev">
+							</div>
+							<div class="swiper-next login-page__reviews-next">
+								<img src="./img/icons/slider-arrow__right.svg" alt="Next">
+							</div>
+						</div>
+					</div>
+					<div class="login-page__reviews-links">
+						<a href="#" class="login-page__reviews-link">
+							<img src="./img/icons/tg_icon__brown.svg" alt="Telegram">
+						</a>
+						<a href="#" class="login-page__reviews-link">
+							<img src="./img/icons/inst_icon__brown.svg" alt="Instagram">
+						</a>
+					</div>
+					<div class="login-page__reviews-logo">
+						<img src="./img/logo.svg" alt="Logo">
+					</div>
+				</div>
+			</div>
+			<p class="login-page__reviews-policy">
+				You.Course<br>04 | 2022
+			</p>
+		</section>
+	</div>
+</body>
+
+</html>

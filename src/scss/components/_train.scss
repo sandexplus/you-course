@@ -1,0 +1,57 @@
+.train {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+    padding-bottom: 95px;
+    &_right {
+      flex-direction: row-reverse;
+    }
+    &__data {
+      max-width: 760px;
+      position: relative;
+    }
+    &__name, &__number {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      color: #744111;
+    }
+    &__number {
+      position: absolute;
+      left: -30px;
+      top: 0;
+    }
+    &__times {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #A7A7A7;
+      margin-top: 17px;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 57px;
+        height: 2px;
+        background: rgba(53, 53, 53, 0.4);
+        position: absolute;
+        bottom: -14px;
+        left: 0;
+      }
+    }
+    &__descr {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #434242;
+      margin-top: 28px;
+    }
+  }
