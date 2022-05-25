@@ -25,7 +25,7 @@ export default function drawTrains(trains) {
         checkImg.setAttribute('src', './img/icons/train-check.svg');
 
         const numberText = document.createElement('span');
-        numberText.innerText = i;
+        numberText.innerText = i + 1;
         // console.log(number)
         trainNumber.addEventListener('click', (e) => {
             changeTrain(e, i, number);
