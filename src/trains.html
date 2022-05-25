@@ -10,29 +10,14 @@
             <div class="container">
             @include('partials/back-btn.html')
               <h2 class="title">Тренировки</h2>
-              <div class="trains-page__trains-numbers">
-                <div class="trains-page__train-number" :class="{'trains-page__train-number_current': currentTrain === i}" v-for="number, i in trains" :key="i" 
-                @click="(e) => changeCurrentTrain(e, i)">
-                  <div class="trains-page__train-check" :class="{'trains-page__train-check_checked': checkedTrains.indexOf(i) !== -1}" @click="() => checkTrain(i)">
-                    <img src="./img/icons/train-check.svg" alt="Checked">
-                  </div>
-                  <span>{{ i + 1 }}</span>
+              <div class="trains-page__trains__container">
+                <div class="trains-page__trains-numbers">
                 </div>
-              </div>
-              <p class="trains-page__check-descr">
-                Законченные тренировки можно помечать нажатием на кружок в углу ячейки с номером тренировки
-              </p>
-              <div class="trains-page__trains">
-                <Train
-                  v-for="train, i in trains[currentTrain]"
-                  :key="i"
-                  :dir="i % 2 === 0 ? 1 : 0"
-                  :number="i + 1"
-                  :name="train.name"
-                  :times="train.times"
-                  :descr="train.descr"
-                  :img="'trains-img.svg'"
-                />
+                <p class="trains-page__check-descr">
+                  Законченные тренировки можно помечать нажатием на кружок в углу ячейки с номером тренировки
+                </p>
+                <div class="trains-page__trains">
+                </div>
               </div>
             </div>
           </div>
