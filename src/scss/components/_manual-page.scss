@@ -20,8 +20,8 @@
       color: #FFFFFF;
     }
     &__descr {
-      padding: 34px 34px;
-      max-width: 489px;
+      padding: 30px 34px;
+      max-width: 540px;
       margin: 0 auto;
       margin-top: 60px;
       display: flex;
@@ -50,6 +50,7 @@
       }
     }
     &__p {
+      margin-left: 20px;
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
