@@ -123,7 +123,7 @@ const trains = [
   ]
 ];
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://buttery-sugary-cut.glitch.me';
 
 import getServerData from "./components/getServerData";
 // console.log(getServerData(baseUrl + '/users'));

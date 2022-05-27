@@ -1,4 +1,4 @@
-export default async function postData(url, data) {
+export default async function putData(url, data) {
     const rawResponse = await fetch(url, {
         method: 'PUT',
         headers: {
