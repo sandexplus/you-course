@@ -1,4 +1,6 @@
 import { Navigation, Pagination } from "swiper";
+import putTables from "./components/putTables";
+
 
 const data = [
     [
@@ -121,10 +123,50 @@ const trains = [
   ]
 ];
 
+const baseUrl = 'http://localhost:3000';
 
+import getServerData from "./components/getServerData";
+// console.log(getServerData(baseUrl + '/users'));
+
+if (document.querySelector('.menu-page')) {
+  addUser(baseUrl);
+}
+
+getServerData(`${baseUrl}/users?login=${localStorage.getItem('login')}`)
+  .then(res => {
+    // console.log(res)
+    if (document.querySelector('.header__user')) {
+      document.querySelector('.header__user').innerHTML = res[0].name;
+    }
+    if (document.querySelector('.swiper__tables')) {
+      console.log(res[0].tracker)
+      putTables(res[0].tracker);
+      swiper('.swiper__tables', {
+          loop: false,
+          slidesPerView: 1,
+          spaceBetween: 40,
+          allowTouchMove: false,
+          modules: [Navigation, Pagination],
+          slideClass: 'table',
+          navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev'
+          },
+          pagination: {
+            type: 'fraction', 
+            el: '.swiper-pagination'
+          }
+      });
+      saveTable(baseUrl);
+  }
+    
+  })
 
 import smoothScrolls from "./components/smoothScrolls";
 smoothScrolls();
+
+
+logIn('.login-page__header-login', '.popup__input', '.popup__button', baseUrl);
 
 import swiper from "./components/swiper";
 swiper('.swiper__login-page', {
@@ -141,26 +183,9 @@ swiper('.swiper__login-page', {
 import popup from "./components/popup";
 popup('.popup', ['.popup__close', '.popup__overlay'], ['.login-page__header-login']);
 
-import putTables from "./components/putTables";
-if (document.querySelector('.swiper__tables')) {
-    putTables(data);
-    swiper('.swiper__tables', {
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 40,
-        allowTouchMove: false,
-        modules: [Navigation, Pagination],
-        slideClass: 'table',
-        navigation: {
-          nextEl: '.swiper-next',
-          prevEl: '.swiper-prev'
-        },
-        pagination: {
-          type: 'fraction', 
-          el: '.swiper-pagination'
-        }
-    });
-}
 
 import drawTrains from "./components/drawTrains";
-drawTrains(trains);
+import addUser from "./components/addUser";
+import logIn from "./components/logIn";
+import saveTable from "./components/saveTable";
+drawTrains(baseUrl);

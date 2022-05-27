@@ -39,6 +39,7 @@ export default function drawTable(tableData, row = 7, coll = 6) {
                     const input = document.createElement('input');
                     input.setAttribute('type', 'text');
                     input.classList.add('table__input');
+                    input.classList.add('table__input_active');
                     new Inputmask('9[9][9]см').mask(input);
                     console.log(1)
                     input.disabled = false;

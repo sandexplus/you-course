@@ -7,7 +7,7 @@ export default function putTables(data) {
         swiper.append(drawTable(table))
     }
     if (data[data.length - 1].length === 6) {
-        console.log(table)
+        // console.log(table)
         for (let table of ['']) {
             swiper.append(drawTable(table))
         }
