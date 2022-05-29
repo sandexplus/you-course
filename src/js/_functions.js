@@ -132,6 +132,14 @@ if (document.querySelector('.menu-page')) {
   addUser(baseUrl);
 }
 
+import popup from "./components/popup";
+popup('.popup', ['.popup__close', '.popup__overlay'], ['.login-page__header-login']);
+popup('.popup', ['.popup__close', '.popup__overlay', '.popup__button'], ['.menu-page__add', '.menu-page__add path', '.menu-page__add span']);
+
+changeCheckbox('.popup__label', 'popup__label_active', '.popup__checkbox', '.popup__custom-chb', 'popup__custom-chb_active');
+
+showAdminFunctions(baseUrl);
+
 getServerData(`${baseUrl}/users?login=${localStorage.getItem('login')}`)
   .then(res => {
     // console.log(res)
@@ -180,12 +188,19 @@ swiper('.swiper__login-page', {
     }
 });
 
-import popup from "./components/popup";
-popup('.popup', ['.popup__close', '.popup__overlay'], ['.login-page__header-login']);
+
 
 
 import drawTrains from "./components/drawTrains";
 import addUser from "./components/addUser";
 import logIn from "./components/logIn";
 import saveTable from "./components/saveTable";
-drawTrains(baseUrl);
+import changeCheckbox from "./components/changeCheckbox";
+import showAdminFunctions from "./components/showAdminFunctions";
+import findTrains from "./components/findTrains";
+if (document.querySelector('.trains-page')) {
+  drawTrains(baseUrl, localStorage.getItem('login'));
+}
+
+findTrains(baseUrl, '.trains-page__search', '.trains-page__search-btn');
+

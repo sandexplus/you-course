@@ -24,7 +24,7 @@ export default function logIn(enterBtnClass, inputClass, btnClass, baseUrl) {
 
         getServerData(`${baseUrl}/users?login=${login}`)
         .then(res => {
-            
+            console.log(res)
             if (res.length !== 1) {
                 return;
             } else {

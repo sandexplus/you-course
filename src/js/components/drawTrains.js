@@ -2,8 +2,8 @@ import changeTrain from "./changeTrain";
 import checkTrain from "./checkTrain";
 import getServerData from "./getServerData";
 
-export default function drawTrains(baseUrl) {
-    getServerData(`${baseUrl}/users?login=${localStorage.getItem('login')}`)
+export default function drawTrains(baseUrl, login) {
+    getServerData(`${baseUrl}/users?login=${login}`)
     // .then(res => res.json())
     .then(data => {
         const trains = data[0].trains;

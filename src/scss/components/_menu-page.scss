@@ -117,4 +117,36 @@
     &__text {
       z-index: 5;
     }
+    &__add {
+      border: none;
+      background: transparent;
+      display: none;
+      align-items: center;
+      justify-self: flex-end;
+      gap: 13px;
+      cursor: pointer;
+      margin: 32px 0 0 100%;
+      transform: translateX(-100%);
+      & span {
+        max-width: 130px;
+        text-align: left;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #A7A7A7;
+      }
+      & .svg-active {
+        display: none;
+      }
+      &:hover {
+        .svg-active {
+          display: block;
+        }
+        .svg-inactive {
+          display: none;
+        }
+      }
+    }
   }
