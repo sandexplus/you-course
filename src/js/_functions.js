@@ -123,7 +123,7 @@ const trains = [
   ]
 ];
 
-const baseUrl = 'https://freckle-pretty-snail.glitch.me';
+const baseUrl = 'https://agate-living-millennium.glitch.me';
 
 import getServerData from "./components/getServerData";
 // console.log(getServerData(baseUrl + '/users'));
