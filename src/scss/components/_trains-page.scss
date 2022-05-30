@@ -100,6 +100,17 @@
         color: rgba(83, 67, 64, 0.3);
       }
     }
+    &__add-train {
+      border: 1.5px solid #AEAEAE;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background: transparent;
+      cursor: pointer;
+    }
     &__search-btn {
       border: 1.5px solid #AEAEAE;
       border-radius: 20px;

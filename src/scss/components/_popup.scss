@@ -52,6 +52,25 @@
         }
       }
     }
+    &__textarea {
+      width: 100%;
+      min-height: 110px;
+      border: none;
+      border-radius: 20px;
+      resize: vertical;
+      padding: 15px 26px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      color: #434242;
+      background: rgba(53, 53, 53, 0.05);
+      margin-top: 17px;
+      &::placeholder {
+        color: #AEAEAE;
+      }
+    }
     &__title {
       max-width: 535px;
       font-family: 'Montserrat';
@@ -87,7 +106,7 @@
         color: #AEAEAE;
       }
     }
-    &__button {
+    &__button, &__button--not-close {
       background: #724724;
       border-radius: 20px;
       border: none;

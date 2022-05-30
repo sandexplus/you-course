@@ -15,6 +15,7 @@ export default function findTrains(baseUrl, inputClass, btnClass) {
             res.forEach(user => {
                 if (user.login === login.value) {
                     document.querySelector('.trains-page__trains-numbers').innerHTML = '';
+                    document.querySelector('.trains-page__trains').innerHTML = '';
                     drawTrains(baseUrl, login.value)
                 }
             })

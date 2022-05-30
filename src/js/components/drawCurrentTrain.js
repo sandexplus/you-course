@@ -33,8 +33,8 @@ export default function drawCurrentTrain(trains) {
         trainImgContainer.classList.add('train__img');
 
         const trainImg = document.createElement('img');
-        // trainImg.setAttribute('src', img ? `./img/${train[img]}` : '');
-        trainImg.setAttribute('src', './img/trains-img.svg');
+        trainImg.setAttribute('src', train.img);
+        // trainImg.setAttribute('src', './img/trains-img.svg');
 
         trainData.append(trainNumber);
         trainData.append(trainName);

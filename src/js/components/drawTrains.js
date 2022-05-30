@@ -1,6 +1,7 @@
 import changeTrain from "./changeTrain";
 import checkTrain from "./checkTrain";
 import getServerData from "./getServerData";
+import addMoreTrain from "./addMoreTrain";
 
 export default function drawTrains(baseUrl, login) {
     getServerData(`${baseUrl}/users?login=${login}`)
@@ -45,6 +46,19 @@ export default function drawTrains(baseUrl, login) {
 
             trainsNumbers.append(trainNumber);
         });
+        const trainNumber = document.createElement('div');
+        trainNumber.classList.add('trains-page__train-number');
+        trainNumber.classList.add('js-admin');
+        trainNumber.classList.add('js-add-more-train');
+        const trainNumberAdd = document.createElement('img');
+        trainNumberAdd.setAttribute('src', '../../img/plus.png');
+        trainNumberAdd.classList.add('js-add-more-train');
+        trainNumber.append(trainNumberAdd);
+        if (trains.length) {
+             trainsNumbers.append(trainNumber);
+             addMoreTrain(baseUrl); 
+        }
+        
         trainsAllContainer.prepend(trainsNumbers);
     });
     

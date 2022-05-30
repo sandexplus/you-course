@@ -123,7 +123,7 @@ const trains = [
   ]
 ];
 
-const baseUrl = 'https://freckle-pretty-snail.glitch.me/';
+const baseUrl = 'https://freckle-pretty-snail.glitch.me';
 
 import getServerData from "./components/getServerData";
 // console.log(getServerData(baseUrl + '/users'));
@@ -134,11 +134,16 @@ if (document.querySelector('.menu-page')) {
 
 import popup from "./components/popup";
 popup('.popup', ['.popup__close', '.popup__overlay'], ['.login-page__header-login']);
+popup('.popup', ['.popup__close', '.popup__overlay'], ['.trains-page__add-train', '.trains-page__add-train svg', '.trains-page__add-train path']);
 popup('.popup', ['.popup__close', '.popup__overlay', '.popup__button'], ['.menu-page__add', '.menu-page__add path', '.menu-page__add span']);
 
 changeCheckbox('.popup__label', 'popup__label_active', '.popup__checkbox', '.popup__custom-chb', 'popup__custom-chb_active');
 
 showAdminFunctions(baseUrl);
+
+
+
+addTrain(baseUrl);
 
 getServerData(`${baseUrl}/users?login=${localStorage.getItem('login')}`)
   .then(res => {
@@ -198,6 +203,8 @@ import saveTable from "./components/saveTable";
 import changeCheckbox from "./components/changeCheckbox";
 import showAdminFunctions from "./components/showAdminFunctions";
 import findTrains from "./components/findTrains";
+import addTrain from "./components/addTrain";
+import addMoreTrain from "./components/addMoreTrain";
 if (document.querySelector('.trains-page')) {
   drawTrains(baseUrl, localStorage.getItem('login'));
 }
