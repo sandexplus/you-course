@@ -31,7 +31,6 @@ export default function saveTable(baseUrl) {
                         newTracker[i].push(inputsData);
                         newData.tracker = newTracker;
                         putData(`${baseUrl}/users/${servData[0].id}`, newData);
-                        window.location.reload();
                         break;
                     } else if (servData[0].tracker[i].length === 5) {
                         const newData = servData[0];
@@ -40,7 +39,6 @@ export default function saveTable(baseUrl) {
                         newTracker[i].push(inputsData);
                         newData.tracker = newTracker;
                         putData(`${baseUrl}/users/${servData[0].id}`, newData);
-                        window.location.reload();
                         break
                     }
                 }
